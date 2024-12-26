@@ -14,7 +14,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100dvh; /* Use dynamic viewport height for better behaviour on mobile */
     overflow: hidden;
 }
 
