@@ -28,6 +28,7 @@ body {
     background-image: url('img/deskbackground.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
     transform: translateY(0);
 }
@@ -47,6 +48,7 @@ body {
     font-weight: bold;
     margin: 0;
     letter-spacing: .8rem;
+    font-size: 3rem;
     color: #ffffff;
 }
 
@@ -144,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     letter-spacing: .8rem;
     color: #3b3b3b;
+    font-size: 1rem;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -166,4 +169,36 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
     }
+
+.hero {
+    width: auto; 
+    padding: 20px; /* Add space around the content */
+    min-height: 100vh;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+}
+
+.hero::before {
+    background-size: contain; /* Adjust the image to fit within the container */
+    background-position: top; /* Align the image to the top on smaller screens */
+}
+
+.hero-content {
+    margin-top: 20vh; /* Adjust the margin for better spacing */
+}
+
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+    font-size: 1.5rem; /* Slightly smaller for tablets */
+}
+
+.hero p {
+    font-size: 1.1rem; /* Adjusted for better readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem; /* Slightly smaller for tablets */
+}
+
+p {
+    font-size: 1.1rem; /* Adjusted for better readability */
+}
 }
