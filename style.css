@@ -14,8 +14,11 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: calc(100vh - var(--safe-area-inset-bottom, 0px)); /* Adjusts for safe area */
+    height: 100vh; /* Full viewport height */
     overflow: hidden;
+    padding: 0; /* Reset padding if any */
+    margin: 0; /* Reset margin if any */
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
 }
 
 .hero::before {
@@ -40,6 +43,8 @@ body {
     color: white;
     margin-top: 50vh;
     font-size: 2rem;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
@@ -86,6 +91,7 @@ body {
     letter-spacing: .2rem;
     color: #3b3b3b;
     width: 100%; /* Ensure the content section takes up full width */
+    margin: 0;
 }
 
 /* Even sections with white background */
@@ -172,14 +178,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
     width: auto; 
-    padding: 20px; /* Add space around the content */
-    min-height: 100vh;
+    padding: 25vh 10vw; 
+    min-height: 80vh;
     box-sizing: border-box; /* Ensure padding doesn't affect height */
 }
 
 .hero::before {
-    background-size: contain; /* Adjust the image to fit within the container */
-    background-position: top; /* Align the image to the top on smaller screens */
+    background-size: cover; /* Ensures the background fully covers the container */
+    background-position: center; /* Center the image */
 }
 
 .hero-content {
