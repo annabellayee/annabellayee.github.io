@@ -209,16 +209,3 @@ p {
 }
 }
 
-@media (max-width: 480px) {
-    .hero-content {
-        margin-top: 30vh; /* Reduce top margin for better fit */
-    }
-
-    .hero h1 {
-        font-size: 2rem; /* Smaller font size for better spacing */
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
