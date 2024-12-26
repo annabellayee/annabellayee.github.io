@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/deskbackground.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transform: translateY(0);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    margin-top: 50vh;
+    font-size: 2rem;
+}
+
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: .8rem;
+    color: #ffffff;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-family: 'Source Serif 4', serif;
+    letter-spacing: .2rem;
+}
+
+.hero .icons {
+    margin-top: 10px;
+}
+
+.hero .icons a {
+    color: white;
+    font-size: 1rem;
+    margin: 0.2rem;
+    text-decoration: none;
+}
+
+.hero .icons a:hover {
+    opacity: 0.7;
+}
+
+/* Content Sections */
+.content {
+    position: relative;
+    padding: 100px 20px;
+    text-align: start;
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-family: 'Source Serif 4', serif;
+    letter-spacing: .2rem;
+    color: #3b3b3b;
+    width: 100%; /* Ensure the content section takes up full width */
+}
+
+/* Even sections with white background */
+.content:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Odd sections with light grey background */
+.content:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.content-wrapper {
+    max-width: 1200px; /* This keeps the content centered */
+    margin: 0 auto;
+    padding: 0 20px; /* Ensure there is padding on smaller screens */
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    padding: 20px 20px; /* Padding around the content */
+}
+
+.profile-img {
+    width: 130px; /* Set the size of the image */
+    height: 130px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image does not get distorted */
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #fff; /* Optional: adds a border around the image */
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #a7a7a7;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: .8rem;
+    color: #3b3b3b;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 50px 20px;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+}
