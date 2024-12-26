@@ -14,7 +14,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100dvh; /* Use dynamic viewport height for better behaviour on mobile */
+    height: calc(100vh - var(--safe-area-inset-bottom, 0px)); /* Adjusts for safe area */
     overflow: hidden;
 }
 
@@ -201,4 +201,18 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-size: 1.1rem; /* Adjusted for better readability */
 }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        margin-top: 30vh; /* Reduce top margin for better fit */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size for better spacing */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
