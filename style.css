@@ -90,7 +90,7 @@ body {
     font-size: 1rem;
     text-transform: lowercase;
     font-family: 'Source Serif 4', serif;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     color: #3b3b3b;
     width: 100%; /* Ensure the content section takes up full width */
     margin: 0;
@@ -145,6 +145,8 @@ footer {
 
 footer p {
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -163,17 +165,17 @@ h1, h2, h3, h4, h5, h6 {
     align-items: left;
     text-align: left;
     width: 100%;
-    padding: 20px 20px; /* Padding around the content */
+    padding: 20px 0px; /* Padding around the content */
 }
 
 .portfolio ul {
     margin: 10px 0;
-    padding-left: 20px;
+    padding-left: 0px;
     list-style-type: disc; /* Use disc, circle, square, etc. */
 }
 
 .portfolio ul li {
-    margin-left: 10px;
+    margin-left: 2rem;
     margin-top: 10px;
     margin-bottom: 5px; 
     font-size: 1rem; 
@@ -217,6 +219,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero::before {
     background-size: cover; /* Ensures the background fully covers the container */
     background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Ensure it doesn't repeat */
+    height: 100%; /* Ensure it covers the full height of the hero section */
+    width: 100%; /* Ensure it covers the full width of the hero section */
 }
 
 .hero-content {
@@ -238,6 +243,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-size: 1.1rem; /* Adjusted for better readability */
+}
+footer {font-size: 0.5rem;
 }
 }
 
